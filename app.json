@@ -24,23 +24,10 @@
         "DB_CONNECTION": {
             "value": "pgsql",
             "required": true
-        },
-        "CACHE_DRIVER": {
-            "value": "redis",
-            "required": true
-        },
-        "FILESYSTEM_DISK": {
-            "value": "local",
-            "required": true
-        },
-        "QUEUE_CONNECTION": {
-            "value": "redis",
-            "required": true
         }
     },
     "addons": [
         "heroku-postgresql:hobby-dev",
-        "heroku-redis:hobby-dev",
         "scheduler"
     ],
     "formation": {
