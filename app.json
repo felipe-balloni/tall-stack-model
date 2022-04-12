@@ -1,0 +1,51 @@
+{
+    "name": "laravel-tall-stack-model",
+    "description": "Laravel Tall Stack modelo completo com deploy no Heroku",
+    "keywords": [
+        "laravel", "tall", "stack", "livewire", "alpinejs", "deploy", "heroku", "tailwindcss"
+    ],
+    "env": {
+        "APP_NAME": {
+            "value": "laravel-tall-stack-model",
+            "required": true
+        },
+        "APP_KEY": {
+            "description": "Run php artisan key:generate --show or get a key",
+            "required": true
+        },
+        "APP_DEBUG": {
+            "value": "true",
+            "required": true
+        },
+        "LOG_CHANNEL": {
+            "value": "errorlog",
+            "required": true
+        },
+        "DB_CONNECTION": {
+            "value": "pgsql",
+            "required": true
+        }
+    },
+    "addons": [
+        "heroku-postgresql:hobby-dev",
+        "scheduler"
+    ],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        },
+        "scheduler": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/php"
+        },
+        {
+            "url": "heroku/nodejs"
+        }
+    ]
+}
